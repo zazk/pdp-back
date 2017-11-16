@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+	PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<settings>
+			<setting name="logImpl" value="LOG4J"/>
+				<setting name="cacheEnabled" value="true"/>
+	</settings>
+
+	<typeAliases>
+			<typeAlias type="pe.com.pdp.domain.postgres.MascotaFoto" alias="MascotaFoto" />
+			<typeAlias type="pe.com.pdp.domain.postgres.PersonaMascota" alias="PersonaMascota" />
+			<typeAlias type="pe.com.pdp.domain.postgres.RolOpcion" alias="RolOpcion" />
+			<typeAlias type="pe.com.pdp.domain.postgres.UsuarioRol" alias="UsuarioRol" />
+			<typeAlias type="pe.com.pdp.domain.postgres.Usuario" alias="Usuario" />
+			<typeAlias type="pe.com.pdp.domain.postgres.Opcion" alias="Opcion" />
+			<typeAlias type="pe.com.pdp.domain.postgres.Persona" alias="Persona" />
+			<typeAlias type="pe.com.pdp.domain.postgres.Rol" alias="Rol" />
+				
+			<typeAlias type="pe.com.pdp.domain.postgres.Busqueda" alias="Busqueda" />
+			<typeAlias type="pe.com.pdp.domain.postgres.Contacto" alias="Contacto" />
+			<typeAlias type="pe.com.pdp.domain.postgres.Elemento" alias="Elemento" />
+			<typeAlias type="pe.com.pdp.domain.postgres.Email" alias="Email" />
+			<typeAlias type="pe.com.pdp.domain.postgres.Encontrado" alias="Encontrado" />
+			<typeAlias type="pe.com.pdp.domain.postgres.GrupoElemento" alias="GrupoElemento" />
+			<typeAlias type="pe.com.pdp.domain.postgres.Mascota" alias="Mascota" />
+			<typeAlias type="pe.com.pdp.domain.postgres.Notificacion" alias="Notificacion" />
+			<typeAlias type="pe.com.pdp.domain.postgres.Negocio" alias="Negocio" />
+			<typeAlias type="pe.com.pdp.domain.postgres.Anuncio" alias="Anuncio" />
+			<typeAlias type="pe.com.pdp.domain.postgres.BusquedaFoto" alias="BusquedaFoto" />
+			<typeAlias type="pe.com.pdp.domain.postgres.EncontradoFoto" alias="EncontradoFoto" />
+			<typeAlias type="pe.com.pdp.domain.postgres.Ubigeo" alias="Ubigeo" />
+			<typeAlias type="pe.com.pdp.domain.postgres.NegocioCategoria" alias="NegocioCategoria" />
+			
+	</typeAliases>
+	
+	<mappers>
+		
+		<mapper resource="pe/com/pdp/dao/postgres/sqlmap/RolOpcionMapper.xml" /> 
+		<mapper resource="pe/com/pdp/dao/postgres/sqlmap/UsuarioRolMapper.xml" />
+		<mapper resource="pe/com/pdp/dao/postgres/sqlmap/UsuarioMapper.xml" />
+		<mapper resource="pe/com/pdp/dao/postgres/sqlmap/RolMapper.xml" />
+		<mapper resource="pe/com/pdp/dao/postgres/sqlmap/OpcionMapper.xml" /> 
+		<mapper resource="pe/com/pdp/dao/postgres/sqlmap/PersonaMapper.xml" />  
+		<mapper resource="pe/com/pdp/dao/postgres/sqlmap/MascotaFotoMapper.xml" /> 
+		<mapper resource="pe/com/pdp/dao/postgres/sqlmap/PersonaMascotaMapper.xml" /> 
+		<mapper resource="pe/com/pdp/dao/postgres/sqlmap/BusquedaFotoMapper.xml" /> 
+		<mapper resource="pe/com/pdp/dao/postgres/sqlmap/EncontradoFotoMapper.xml" /> 
+		<mapper resource="pe/com/pdp/dao/postgres/sqlmap/BusquedaMapper.xml" /> 
+		<mapper resource="pe/com/pdp/dao/postgres/sqlmap/ContactoMapper.xml" /> 
+		<mapper resource="pe/com/pdp/dao/postgres/sqlmap/ElementoMapper.xml" /> 
+		<mapper resource="pe/com/pdp/dao/postgres/sqlmap/EmailMapper.xml" /> 
+		<mapper resource="pe/com/pdp/dao/postgres/sqlmap/EncontradoMapper.xml" /> 
+		<mapper resource="pe/com/pdp/dao/postgres/sqlmap/GrupoElementoMapper.xml" /> 
+		<mapper resource="pe/com/pdp/dao/postgres/sqlmap/MascotaMapper.xml" /> 
+		<mapper resource="pe/com/pdp/dao/postgres/sqlmap/NotificacionMapper.xml" /> 
+		<mapper resource="pe/com/pdp/dao/postgres/sqlmap/AnuncioMapper.xml" />
+		<mapper resource="pe/com/pdp/dao/postgres/sqlmap/NegocioMapper.xml" />
+		<mapper resource="pe/com/pdp/dao/postgres/sqlmap/UbigeoMapper.xml" /> 
+		<mapper resource="pe/com/pdp/dao/postgres/sqlmap/NegocioCategoriaMapper.xml" /> 
+		
+	</mappers> 
+	
+</configuration>

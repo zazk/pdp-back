@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<classPathEntry location="C:\\postgresql-9.4-1200-jdbc41.jar" />
+
+	<context id="context1" targetRuntime="MyBatis3"
+		defaultModelType="hierarchical">
+		<plugin type="org.mybatis.generator.plugins.RenameExampleClassPlugin">
+			<property name="searchString" value="Example$" />
+			<property name="replaceString" value="Criteria" />
+		</plugin>
+		<plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin" />
+		<plugin type="org.mybatis.generator.plugins.CaseInsensitiveLikePlugin" />
+
+		<!-- No generamos los comentarios -->
+		<commentGenerator>
+			<property name="suppressAllComments" value="false" />
+		</commentGenerator>
+		<!-- Parámetros de conexión a la bd -->
+
+		<jdbcConnection driverClass="org.postgresql.Driver"
+			connectionURL="jdbc:postgresql://138.197.88.11:5432/localDatabase" userId="postgres"
+			password="postgres">
+		</jdbcConnection>
+
+		<javaModelGenerator targetPackage="pe.com.pdp.domain.postgres"
+			targetProject="pdp-domain\src\main\java">
+			<property name="enableSubPackages" value="false" />
+		</javaModelGenerator>
+
+		<sqlMapGenerator targetPackage="pe.com.pdp.dao.postgres.sqlmap"
+			targetProject="pdp-dao\src\main\resources">
+			<property name="enableSubPackages" value="false" />
+		</sqlMapGenerator>
+
+		<!-- También podríamos indicar el tipo ANNOTATEDMAPPER -->
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="pe.com.pdp.dao.postgres" targetProject="pdp-dao\src\main\java">
+			<property name="enableSubPackages" value="false" />
+		</javaClientGenerator>
+		<!-- Generamos el código fuente de todas las tablas evitando la generación 
+			varios métodos -->
+
+		<!-- Mapeo de Tablas START -->
+
+	
+
+		<!-- <table tableName="td_mascota_foto" domainObjectName="MascotaFoto"
+			delimitIdentifiers="true" delimitAllColumns="true" schema="pataPerro"
+			modelType="flat">
+			<property name="useActualColumnNames" value="false" />
+			<property name="constructorBased" value="false" />
+		</table>
+
+		<table tableName="td_persona_mascota" domainObjectName="PersonaMascota"
+			delimitIdentifiers="true" delimitAllColumns="true" schema="pataPerro"
+			modelType="flat">
+			<property name="useActualColumnNames" value="false" />
+			<property name="constructorBased" value="false" />
+		</table>
+		
+		
+		<table tableName="td_encontrado_foto" domainObjectName="EncontradoFoto"
+			delimitIdentifiers="true" delimitAllColumns="true" schema="pataPerro"
+			modelType="flat">
+			<property name="useActualColumnNames" value="false" />
+			<property name="constructorBased" value="false" />
+		</table>
+		
+		
+		<table tableName="td_busqueda_foto" domainObjectName="BusquedaFoto"
+			delimitIdentifiers="true" delimitAllColumns="true" schema="pataPerro"
+			modelType="flat">
+			<property name="useActualColumnNames" value="false" />
+			<property name="constructorBased" value="false" />
+		</table>
+
+		<table tableName="td_rol_opcion" domainObjectName="RolOpcion"
+			delimitIdentifiers="true" delimitAllColumns="true" schema="pataPerro"
+			modelType="flat">
+			<property name="useActualColumnNames" value="false" />
+			<property name="constructorBased" value="false" />
+		</table>
+
+		<table tableName="td_usuario_rol" domainObjectName="UsuarioRol"
+			delimitIdentifiers="true" delimitAllColumns="true" schema="pataPerro"
+			modelType="flat">
+			<property name="useActualColumnNames" value="false" />
+			<property name="constructorBased" value="false" />
+		</table>
+
+		<table tableName="tm_busqueda" domainObjectName="Busqueda"
+			delimitIdentifiers="true" delimitAllColumns="true" schema="pataPerro"
+			modelType="flat">
+			<property name="useActualColumnNames" value="false" />
+			<property name="constructorBased" value="false" />
+		</table>
+
+		<table tableName="tm_contacto" domainObjectName="Contacto"
+			delimitIdentifiers="true" delimitAllColumns="true" schema="pataPerro"
+			modelType="flat">
+			<property name="useActualColumnNames" value="false" />
+			<property name="constructorBased" value="false" />
+		</table>
+
+		<table tableName="tm_elemento" domainObjectName="Elemento"
+			delimitIdentifiers="true" delimitAllColumns="true" schema="pataPerro"
+			modelType="flat">
+			<property name="useActualColumnNames" value="false" />
+			<property name="constructorBased" value="false" />
+		</table>
+
+		<table tableName="tm_email" domainObjectName="Email"
+			delimitIdentifiers="true" delimitAllColumns="true" schema="pataPerro"
+			modelType="flat">
+			<property name="useActualColumnNames" value="false" />
+			<property name="constructorBased" value="false" />
+		</table>
+
+		<table tableName="tm_encontrado" domainObjectName="Encontrado"
+			delimitIdentifiers="true" delimitAllColumns="true" schema="pataPerro"
+			modelType="flat">
+			<property name="useActualColumnNames" value="false" />
+			<property name="constructorBased" value="false" />
+		</table>
+
+		<table tableName="tm_grupo_elemento" domainObjectName="GrupoElemento"
+			delimitIdentifiers="true" delimitAllColumns="true" schema="pataPerro"
+			modelType="flat">
+			<property name="useActualColumnNames" value="false" />
+			<property name="constructorBased" value="false" />
+		</table>
+
+		<table tableName="tm_mascota" domainObjectName="Mascota"
+			delimitIdentifiers="true" delimitAllColumns="true" schema="pataPerro"
+			modelType="flat">
+			<property name="useActualColumnNames" value="false" />
+			<property name="constructorBased" value="false" />
+		</table>
+
+
+		<table tableName="tm_notificacion" domainObjectName="Notificacion"
+			delimitIdentifiers="true" delimitAllColumns="true" schema="pataPerro"
+			modelType="flat">
+			<property name="useActualColumnNames" value="false" />
+			<property name="constructorBased" value="false" />
+		</table>
+
+
+		<table tableName="tm_opcion" domainObjectName="Opcion"
+			delimitIdentifiers="true" delimitAllColumns="true" schema="pataPerro"
+			modelType="flat">
+			<property name="useActualColumnNames" value="false" />
+			<property name="constructorBased" value="false" />
+		</table>
+
+
+		<table tableName="tm_persona" domainObjectName="Persona"
+			delimitIdentifiers="true" delimitAllColumns="true" schema="pataPerro"
+			modelType="flat">
+			<property name="useActualColumnNames" value="false" />
+			<property name="constructorBased" value="false" />
+		</table>
+
+		<table tableName="tm_usuario" domainObjectName="Usuario"
+			delimitIdentifiers="true" delimitAllColumns="true" schema="pataPerro"
+			modelType="flat">
+			<property name="useActualColumnNames" value="false" />
+			<property name="constructorBased" value="false" />
+		</table>
+
+		<table tableName="tm_rol" domainObjectName="Rol"
+			delimitIdentifiers="true" delimitAllColumns="true" schema="pataPerro"
+			modelType="flat">
+			<property name="useActualColumnNames" value="false" />
+			<property name="constructorBased" value="false" />
+		</table>
+
+
+		<table tableName="tm_negocio" domainObjectName="Negocio"
+			delimitIdentifiers="true" delimitAllColumns="true" schema="pataPerro"
+			modelType="flat">
+			<property name="useActualColumnNames" value="false" />
+			<property name="constructorBased" value="false" />
+		</table>
+		
+		<table tableName="tm_anuncio" domainObjectName="Anuncio"
+			delimitIdentifiers="true" delimitAllColumns="true" schema="pataPerro"
+			modelType="flat">
+			<property name="useActualColumnNames" value="false" />
+			<property name="constructorBased" value="false" />
+		</table> 
+		
+		<table tableName="tm_ubigeo" domainObjectName="Ubigeo"
+			delimitIdentifiers="true" delimitAllColumns="true" schema="pataPerro"
+			modelType="flat">
+			<property name="useActualColumnNames" value="false" />
+			<property name="constructorBased" value="false" />
+		</table>
+		
+			<table tableName="td_negocio_categoria" domainObjectName="NegocioCategoria"
+			delimitIdentifiers="true" delimitAllColumns="true" schema="pataPerro"
+			modelType="flat">
+			<property name="useActualColumnNames" value="false" />
+			<property name="constructorBased" value="false" />
+		</table>
+		
+		-->
+		<table tableName="tm_ubigeo" domainObjectName="Ubigeo"
+			delimitIdentifiers="true" delimitAllColumns="true" schema="pataPerro"
+			modelType="flat">
+			<property name="useActualColumnNames" value="false" />
+			<property name="constructorBased" value="false" />
+		</table>
+
+
+		<!-- Mapeo de Tablas END -->
+
+	</context>
+</generatorConfiguration>
